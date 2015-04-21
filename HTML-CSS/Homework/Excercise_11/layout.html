@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="bg">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Title</title>
+<style>
+    html, body {
+	    margin: 0;
+	    padding: 0;
+	    height: 100%;
+	    font-family: Verdana, arial, sans-serif;
+	    background-color: cyan;
+    }
+    body {
+	    overflow-y: scroll;
+    }
+    div.main {
+	    width: 900px;
+	    min-height: 100%;
+	    border: none;
+	    background-color: cyan;
+	    background-position: 0 0;
+	    background-size: 900px 200px;
+	    margin: 0 auto;
+	    padding: 0;
+	    box-shadow: 0 0 50px black;
+	    overflow: hidden;
+	    position: relative;
+    }
+    div.head {
+	    margin: 0;
+	    padding: 0;
+	    width: 100%;
+	    height: 200px;
+	    border: none;
+	    background-image: url('./stone.jpg');
+	    background-repeat: no-repeat;
+	    background-position: 0 0;
+	    background-size: 900px 200px;
+	    transition: background-position 3s linear;
+    }
+
+    div.head h1 {
+	    margin: 0;
+	    padding: 0;
+	    line-height: 30px;
+	    font-size: 28px;
+	    font-weight: bold;
+	    position: absolute;
+	    top: 60px;
+	    left: 200px;
+    }
+    div.head h2 {
+	    margin: 0;
+	    padding: 0;
+	    line-height: 20px;
+	    font-size: 18px;
+	    font-weight: bold;
+	    font-style: italic;
+	    position: absolute;
+	    top: 110px;
+	    left: 200px;
+    }
+    div p {
+	    margin: 0;
+    }
+    a.hidden {
+	    display: none;
+    }
+    nav.vertical {
+	    margin: 0;
+	    padding: 0;
+	    width: 100%;
+	    height: 40px;
+	    background: blue;
+	    text-align:center;
+	    overflow: hidden;
+        
+    }
+    nav.vertical a {
+	    color: white;
+	    text-decoration: none;
+	    line-height: 40px;
+	    display: inline-block;
+	    padding: 0;
+       
+    }
+ 
+    div.main article {
+        margin: 0 30% 50px 200px;
+        padding: 0;
+        background: cyan;
+        text-align:justify;
+    }
+    footer {
+	    background-color: black;
+	    color: white;
+	    text-align:center;
+	    clear: both;
+	    position: absolute;
+	    bottom: 0;
+	    width: 900px;
+    }
+
+
+</style>
+</head>
+<body>
+    <div class="main">
+	<div class="head" id="head">
+		<h1>Lorem ipsum dolor sit amet</h1>
+		<h2>Donec eu justo erat.</h2>
+	</div>
+	<nav class="vertical">
+		<a href="#">One</a>
+		<a href="#">Two</a>
+		<a href="#">Three</a>
+		<a href="#">Four</a>
+		<a href="#">Five</a>
+	</nav>
+	<article>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis auctor urna, non mattis elit iaculis non. Donec eu justo erat. Aenean molestie sit amet dolor sed blandit. Duis elementum condimentum neque ut venenatis. Morbi convallis elit in neque elementum blandit. Vivamus eleifend maximus viverra. Nunc rhoncus sapien quis mollis consectetur. Integer ut turpis accumsan, semper risus et, dictum lectus. Vivamus eu consectetur sapien, eu pretium purus.</p>
+	</article>
+	<footer>
+		Автор: Anna Yoncheva
+	</footer>
+</div>
+</body>
+</html>

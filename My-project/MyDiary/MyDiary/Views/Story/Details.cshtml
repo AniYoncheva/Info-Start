@@ -1,0 +1,45 @@
+﻿@model MyDiary.Models.Story
+
+
+<div class="row">
+    <div class="box">
+        <h4>Details</h4>
+    </div>
+    <div class="box">
+        <div class="form-group">
+            <div class="col-md-8">
+                <div>
+                    <img class='img-thumbnail' src="@Url.Action("RenderPhoto", "Story", new { imageId = Model.StoryId })" />
+                </div>
+            </div>
+            <div>
+                <h4 class="text-center">
+                    <strong>
+                        @Html.DisplayFor(model => model.Name)
+                    </strong>
+                </h4>
+            </div>
+            <div class="col-md-2 col-sm-9 col-xs-6">
+                @Html.DisplayFor(model => model.DateOfCreate)
+            </div>
+            <div>
+                @Html.HiddenFor(model => model.Rate, new { @class = "rating", @readonly = "readonly" })
+            </div>
+            <div class="text-justify">
+                @Html.Raw(Model.Text)
+            </div>
+            <div>
+                <div class='col-md-3 col-sm-10 col-xs-9' id="formDelete" data-id="@Model.StoryId">
+                    @using (@Html.BeginForm("Delete", "Story", FormMethod.Post))
+                    {
+                        <input type="submit" value="Delete" class="btn btn-danger"/>
+                    }
+                </div>
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

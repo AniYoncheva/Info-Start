@@ -1,0 +1,73 @@
+﻿@model List<MyDiary.Models.Story>
+<div class="row">
+    <div class="box">
+        <div class="col-lg-12">
+            <div id="carousel-example-generic" class="carousel slide">
+                <div class="carousel-inner">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item @Html.Raw(item.StoryId == Model.First().StoryId ? "active" : "") img-thumbnail">
+                            <img src="@Url.Action("RenderPhoto", "Story", new { imageId = item.StoryId })" />
+                        </div>
+                    }
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="row">
+    <div class="box">
+        <div>
+            <h3 class="text-center">
+                My
+                <strong>Story</strong>
+            </h3>
+        </div>
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <div class="col-md-10 col-lg-offset-1">
+                    <div class="input-group add-on">
+                        <input class="form-control" placeholder="Search" name="SearchString" type="text">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <div>
+                <div class='picture-info' data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">
+                    <div class="col-md-4">
+                        <h5 class="text-center">
+                            @Html.DisplayFor(m => Model[i].Name)
+                        </h5>
+                        <div class="img-thumbnail">
+                            <img src="@Url.Action("RenderPhoto", "Story", new { imageId = Model[i].StoryId })" />
+                        </div>
+                        <div class="shym-overlay">
+                            <div class="shym-picture-detail-inner over">
+                                <h5 class="text-center">
+                                    @Html.ActionLink(Model[i].Name, "Details", new { id = Model[i].StoryId })
+                                </h5>
+                                <div>
+                                    <a href="~/story/details/@Model[i].StoryId">@Html.Raw(Model[i].Text)</a>
+                                    @*@Html.ActionLink(Model[i].Text, "Details", new { id = Model[i].StoryId })*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

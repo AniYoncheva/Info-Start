@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Problem 4. Numbers Only Field</title>
+</head>
+<body>
+<form action="/" method="get">
+    <input id="textField" type="text" name="textField">
+</form>
+<script>
+    function changeField(){
+        if(isNaN(textField.value)) {
+            textField.style.background = 'red';
+            textField.disabled = true;
+            setTimeout(getPreviousValue, 1000);
+        } else {
+            previousValue = textField.value;
+        }
+    }
+    function getPreviousValue(){
+        textField.value = previousValue;
+        textField.style.background = '';
+        textField.disabled = false;
+        textField.focus();
+    }
+    var textField = document.getElementById('textField'),
+            previousValue ='';
+    textField.addEventListener('input', changeField, false);
+</script>
+</body>
+</html>

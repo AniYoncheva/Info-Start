@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+    <title>Excercise_05</title>
+</head>
+<body>
+    <form method="post" action="#">
+
+        <fieldset style="width:400px">
+            <legend>User Registration</legend>
+            <div>
+                <label for="user">Create a username: <input type="text" id="user" name="user" placeholder="User name"/></label>
+            </div>
+            <div>
+                <label for="pass">Create a password:  <input type="password" id="pass" name="pass" placeholder="Password" /></label>
+            </div>
+            <div>
+                <label for="repassword">Confirm your password <input type="password" id="repassword" name="repassword"/></label>
+            </div>
+        </fieldset>
+
+        <fieldset style="width:400px">
+            <legend>User Information</legend>
+            <div>
+                <label for="email">Email</label>
+            </div>
+                 <input type="email" placeholder="example@domain.com"  id="email" name="email"/><br />
+            <div>
+                <label for="remail">Confirm email</label>
+            </div>
+                <input type="email" id="remail" name="remail"/>
+            <div>
+                <label><input type="radio"/> Male</label>
+                <label><input type="radio"/> Female</label>
+            </div>
+
+        <select name="town" accesskey="t">
+            <optgroup label="Област София-област">
+                <option value="anton">Антон</option>
+                <option value="bojurishte">Божурище</option>
+                <option value="botevgrad">Ботевград</option>
+                <option value="godech">Годеч</option>
+                <option value="gornamalina">Горна Малина</option>
+                <option value="dolnabanq">Долна баня</option>
+                <option value="dragoman">Драгоман</option>
+                <option value="elinpelin">Елин Пелин</option>
+                <option value="etropole">Етрополе</option>
+                <option value="zlatica">Златица</option>
+                <option value="ihtiman">Ихтиман</option>
+                <option value="koprivshtica">Копривщица</option>
+                <option value="kostenec">Костенец</option>
+                <option value="kostinbrod">Костинброд</option>
+                <option value="morkovo">Мирково</option>
+                <option value="pirdop">Пирдоп</option>
+                <option value="pravec">Правец</option>
+                <option value="samokov">Самоков</option>
+                <option value="svoge">Своге</option>
+                <option value="slivnica">Сливница</option>
+                <option value="chavdar">Чавдар</option>
+                <option value="chelopech">Челопеч</option>
+            </optgroup>
+            <optgroup label="Област София">
+                <option value="sofia" selected="selected">София-град</option>
+            </optgroup>
+            </select>
+            <div>
+                <label for="avatar">Избор на аватар: <input type="file" id="avatar"/></label>
+            </div>
+         </fieldset>
+
+            <div>
+                <label><input type="checkbox" value="agree" />I agree</label>
+            </div>
+            <div>
+                <input type="submit" value="Sing in"  />
+                <input type="reset" value="Clear Form" />
+            </div>
+
+    </form>
+</body>
+</html>

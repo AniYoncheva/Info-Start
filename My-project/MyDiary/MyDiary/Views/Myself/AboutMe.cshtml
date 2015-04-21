@@ -1,0 +1,26 @@
+﻿@using System.Configuration;
+
+<h4 class="box">About Me</h4>
+
+<div class="box">
+    @Html.Label("Name") @ConfigurationManager.AppSettings["AuthorName"]
+</div>
+<div class="box">
+    @Html.Label("Born") @ConfigurationManager.AppSettings["Born"]
+</div>
+<div class="box">
+    @Html.Label("Info about me - ") @ConfigurationManager.AppSettings["AuthorInfo"]
+</div>
+<div class="box">
+    <div class="col-md-8">
+        <img class="img-thumbnail" src="~/Content/Images/Ani.jpg" alt="Author Images" />
+    </div>
+</div>
+    <div class="btn btn-default">
+        @Html.ActionLink("Stories", "Index", "Story")
+    </div>
+
+
+
+
+
